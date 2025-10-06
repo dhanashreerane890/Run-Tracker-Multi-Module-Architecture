@@ -1,7 +1,7 @@
 package com.anywhere.core.database.run.mappers
 
 import com.anywhere.core.database.run.entity.RunEntity
-import com.anywhere.core.domain.run.Run
+import com.anywhere.run.domain.Run
 import java.time.Instant
 import java.time.ZoneId
 import java.util.UUID

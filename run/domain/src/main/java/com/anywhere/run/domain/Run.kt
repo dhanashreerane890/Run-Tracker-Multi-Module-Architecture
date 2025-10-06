@@ -1,4 +1,4 @@
-package com.anywhere.core.domain.run
+package com.anywhere.run.domain
 
 import java.time.ZonedDateTime
 import kotlin.time.Duration

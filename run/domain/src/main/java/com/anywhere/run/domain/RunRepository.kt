@@ -1,4 +1,4 @@
-package com.anywhere.core.domain.run
+package com.anywhere.run.domain
 
 import com.anywhere.core.domain.util.DataError
 import com.anywhere.core.domain.util.EmptyResult

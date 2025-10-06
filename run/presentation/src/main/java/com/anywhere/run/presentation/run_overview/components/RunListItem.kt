@@ -42,10 +42,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
-import com.anywhere.core.domain.run.Run
 import com.anywhere.core.presentation.designsystem.CalendarIcon
 import com.anywhere.core.presentation.designsystem.RunOutlinedIcon
 import com.anywhere.core.presentation.designsystem.RuniqueTheme
+import com.anywhere.run.domain.Run
 import com.anywhere.run.presentation.R
 import com.anywhere.run.presentation.run_overview.mapper.toRunUi
 import com.anywhere.run.presentation.run_overview.model.RunDataUi

@@ -1,9 +1,9 @@
 package com.anywhere.network
 
-import com.anywhere.core.domain.run.IDummyRunDataSource
-import com.anywhere.core.domain.run.Run
 import com.anywhere.core.domain.util.DataError
 import com.anywhere.core.domain.util.Result
+import com.anywhere.run.domain.IDummyRunDataSource
+import com.anywhere.run.domain.Run
 import kotlinx.coroutines.delay
 
 class KtorDummyRunDataSource : IDummyRunDataSource {

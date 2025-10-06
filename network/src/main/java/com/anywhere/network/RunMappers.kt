@@ -1,6 +1,6 @@
 package com.anywhere.network
 
-import com.anywhere.core.domain.run.Run
+import com.anywhere.run.domain.Run
 import java.time.Instant
 import java.time.ZoneId
 import kotlin.time.Duration.Companion.milliseconds

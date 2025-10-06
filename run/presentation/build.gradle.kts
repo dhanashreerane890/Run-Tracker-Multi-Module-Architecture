@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.bundles.koin)
 
     implementation(projects.core.domain)
+    implementation(projects.run.domain)
     implementation(projects.core.presentation.designsystem)
     implementation(projects.core.presentation.ui)
 

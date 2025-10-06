@@ -1,4 +1,4 @@
-package com.anywhere.auth.data
+package com.anywhere.auth.data.repo
 
 import com.anywhere.auth.domain.DummyAuthRepository
 import com.anywhere.core.database.user.dao.UserDao

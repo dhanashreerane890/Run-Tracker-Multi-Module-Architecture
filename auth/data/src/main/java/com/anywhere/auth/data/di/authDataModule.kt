@@ -1,7 +1,7 @@
 package com.anywhere.auth.data.di
 
-import com.anywhere.auth.data.DummyAuthRepositoryImpl
 import com.anywhere.auth.data.EmailPatternValidator
+import com.anywhere.auth.data.repo.DummyAuthRepositoryImpl
 import com.anywhere.auth.domain.DummyAuthRepository
 import com.anywhere.auth.domain.PatternValidator
 import com.anywhere.auth.domain.UserDataValidator

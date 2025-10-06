@@ -1,12 +1,12 @@
 package com.anywhere.run.presentation.run_overview.mapper
 
-import com.anywhere.core.domain.run.Run
 import com.anywhere.core.presentation.ui.formatted
 import com.anywhere.core.presentation.ui.toFormattedHeartRate
 import com.anywhere.core.presentation.ui.toFormattedKm
 import com.anywhere.core.presentation.ui.toFormattedKmh
 import com.anywhere.core.presentation.ui.toFormattedMeters
 import com.anywhere.core.presentation.ui.toFormattedPace
+import com.anywhere.run.domain.Run
 import com.anywhere.run.presentation.run_overview.model.RunUi
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter

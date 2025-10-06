@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.anywhere.core.domain.run.RunRepository
+import com.anywhere.run.domain.RunRepository
 import com.anywhere.run.presentation.run_overview.mapper.toRunUi
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

@@ -48,4 +48,5 @@ dependencies {
 
     implementation(libs.bundles.koin)
     implementation(projects.core.domain)
+    implementation(projects.run.domain)
 }

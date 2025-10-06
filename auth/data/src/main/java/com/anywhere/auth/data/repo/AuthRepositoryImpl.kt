@@ -1,5 +1,8 @@
-package com.anywhere.auth.data
+package com.anywhere.auth.data.repo
 
+import com.anywhere.auth.data.LoginRequest
+import com.anywhere.auth.data.LoginResponse
+import com.anywhere.auth.data.RegisterRequest
 import com.anywhere.auth.domain.AuthRepository
 import com.anywhere.core.data.networking.post
 import com.anywhere.core.domain.AuthInfo
@@ -45,4 +48,3 @@ class AuthRepositoryImpl(
         return result.asEmptyDataResult()
     }
 }
-

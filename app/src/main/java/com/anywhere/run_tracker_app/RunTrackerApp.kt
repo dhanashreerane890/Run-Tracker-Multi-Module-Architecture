@@ -6,6 +6,7 @@ import com.anywhere.auth.presentation.di.authViewModelModule
 import com.anywhere.core.data.di.coreDataModule
 import com.anywhere.core.database.di.databaseModule
 import com.anywhere.network.di.networkModule
+import com.anywhere.run.data.di.runDataModule
 import com.anywhere.run.presentation.di.runPresentationModule
 import com.anywhere.run_tracker_app.di.appModule
 import kotlinx.coroutines.CoroutineScope
@@ -32,7 +33,8 @@ class RunTrackerApp : Application() {
                 coreDataModule,
                 runPresentationModule,
                 databaseModule,
-                networkModule
+                networkModule,
+                runDataModule
             )
         }
     }
