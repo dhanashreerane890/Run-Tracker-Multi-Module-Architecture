@@ -59,8 +59,8 @@ private fun NavGraphBuilder.authGraph(navController: NavHostController) {
             LoginScreenRoot(
                 onLoginSuccess = {
                     navController.navigate(Routes.Run) {
-                        popUpTo(Routes.Auth) {
-                            inclusive = true
+                        popUpTo(Routes.Auth) {  // Clears the entire authentication graph from backstack (Intro, Register, Login).
+                            inclusive = true  // Removes the target screen itself
                         }
                     }
                 },
@@ -68,9 +68,9 @@ private fun NavGraphBuilder.authGraph(navController: NavHostController) {
                     navController.navigate(Routes.Register) {
                         popUpTo(Routes.Login) {
                             inclusive = true
-                            saveState = true
+                            saveState = true // Saves the state of screens being popped
                         }
-                        restoreState = true
+                        restoreState = true // Restores previously saved state on navigate
                     }
                 }
             )

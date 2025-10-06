@@ -26,11 +26,11 @@ class HttpClientFactory(
 ) {
 
     fun build(): HttpClient {
-        return HttpClient(CIO) {
-            install(ContentNegotiation) { //ContentNegotiation is a plugin that automatically serializes/deserializes JSON
+        return HttpClient(CIO) { //CIO is the engine used for network I/O in Ktor. It handles the HTTP requests asynchronously.
+            install(ContentNegotiation) { //ContentNegotiation is a plugin that automatically parse JSON
                 json(
                     json = Json {
-                        ignoreUnknownKeys = true // to avoid crashes when the server adds fields.
+                        ignoreUnknownKeys = true //if the server sends extra JSON fields that your data class doesn't have, it won't crash.
                     }
                 )
             }

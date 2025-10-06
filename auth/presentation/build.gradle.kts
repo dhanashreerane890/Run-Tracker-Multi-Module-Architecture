@@ -69,23 +69,4 @@ dependencies {
 
     implementation(libs.koin.androidx.compose)
 
-
-    // JUnit 5
-//    testImplementation(libs.junit.jupiter.api)
-//    testImplementation(libs.junit.jupiter.engine)
-//    testImplementation(libs.junit.jupiter.params)
-
-//    testImplementation(libs.junit)
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("io.mockk:mockk:1.13.13")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
-
-
-    // Coroutines Test
-    testImplementation(libs.kotlinx.coroutines.test)
-
-    // MockK
-//    testImplementation(libs.mockk)
-
-
 }

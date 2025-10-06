@@ -16,7 +16,11 @@ fun <T> ObserveAsEvents(
     onEvent: (T) -> Unit
 ) {
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
+    //This ensures you don't collect a flow unnecessarily
+    //The effect restarts if any of the keys (flow, lifecycleOwner.lifecycle, key1, key2) change.
     LaunchedEffect(flow, lifecycleOwner.lifecycle, key1, key2) {
+        //Ensures the flow is collected only when the lifecycle is at least STARTED.
+        //When the lifecycle goes below STARTED (e.g., app goes to background), the flow collection stops automatically.
         lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
             withContext(Dispatchers.Main.immediate) {
                 flow.collect(onEvent)

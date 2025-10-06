@@ -24,6 +24,9 @@ class RegisterViewModel(
     var state by mutableStateOf(RegisterState())
         private set
 
+    // One-time events like navigation or showing a snackbar
+    // Does not store state — it just sends values.
+    // Events are consumed once
     private val eventChannel = Channel<RegisterEvent>()
     val events = eventChannel.receiveAsFlow()
 

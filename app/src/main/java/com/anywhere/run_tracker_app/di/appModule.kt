@@ -10,6 +10,7 @@ import org.koin.android.ext.koin.androidApplication
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.dsl.module
 
+//A module is a container where you define how to provide dependencies.
 val appModule = module {
     single<SharedPreferences> {
         EncryptedSharedPreferences(
