@@ -10,12 +10,12 @@ import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.bind
 import org.koin.dsl.module
 
-// module declare what can be injected.
+// module is a container where you define how to create objects.
 val authDataModule = module {
     single<PatternValidator> {
         EmailPatternValidator
     }
-    single {
+    single { // single means one shared singleton instance.
         UserDatabase.getDatabase(get())
     }
     single { get<UserDatabase>().userDao() }

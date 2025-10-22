@@ -34,7 +34,7 @@ class HttpClientFactory(
                     }
                 )
             }
-            install(Logging) {
+            install(Logging) { //Debug network calls
                 logger = object : Logger {
                     override fun log(message: String) {
                         Log.e("HttpClientFactory", "log: $message")
@@ -42,11 +42,11 @@ class HttpClientFactory(
                 }
                 level = LogLevel.ALL
             }
-            defaultRequest {
+            defaultRequest { //Adds common headers
                 contentType(ContentType.Application.Json)
                 header("x-api-key", BuildConfig.API_KEY)
             }
-            install(Auth) {
+            install(Auth) { //Auto add & refresh tokens
                 bearer {
                     loadTokens {
                         val info = sessionStorage.get()
