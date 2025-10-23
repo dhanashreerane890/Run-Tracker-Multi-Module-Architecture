@@ -67,7 +67,7 @@ private fun NavGraphBuilder.authGraph(navController: NavHostController) {
                 onSignUpClick = {
                     navController.navigate(Routes.Register) {
                         popUpTo(Routes.Login) {
-                            inclusive = true
+                            inclusive = true //remove the Register screen itself from the back stack.
                             saveState = true // Saves the state of screens being popped
                         }
                         restoreState = true // Restores previously saved state on navigate

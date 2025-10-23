@@ -13,6 +13,7 @@ class EncryptedSessionStorage(
     private val sharedPreferences: SharedPreferences
 ): SessionStorage {
 
+    // AuthInfo → JSON → Encrypted and stored in SharedPreferences
     override suspend fun set(info: AuthInfo?) {
         withContext(Dispatchers.IO) {
             if(info == null) {
@@ -28,6 +29,7 @@ class EncryptedSessionStorage(
         }
     }
 
+    // Encrypted JSON → Decrypted → Deserialized → AuthInfo object
     override suspend fun get(): AuthInfo? {
         return withContext(Dispatchers.IO) {
             val json = sharedPreferences.getString(KEY_AUTH_INFO, null)
